@@ -9,7 +9,7 @@
     url("images/jet_sky.jpg");
   background-position: center;
   background-size: cover;
-  padding: 2rem 4rem;
+  padding: 6rem 4rem;
   h2 {
     text-align: center;
     font-size: variables.$font-large;
@@ -62,8 +62,10 @@
 @keyframes fade {
   from {
     opacity: 0;
+    transform: translateX(100%);
   }
   to {
     opacity: 1;
+    transform: translateX(0);
   }
 }

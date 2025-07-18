@@ -8,7 +8,6 @@ const menuIcon = document.querySelector(".menu-icon");
 // Toggle nav menu
 menuIcon.addEventListener("click", (e) => {
     navMenu.classList.toggle("nav-display");
-    console.log(navMenu.classList)
 })
 // Slides controller
 let slideIndex = 0;
@@ -23,7 +22,7 @@ function showSlides() {
     slideIndex++;
     if (slideIndex > slides.length) { slideIndex = 1 };
     slides[slideIndex - 1].style.display = "flex";
-    setTimeout(showSlides, 3000);
+    setTimeout(showSlides, 5000);
 }
 // Form validation
 //check user entries
