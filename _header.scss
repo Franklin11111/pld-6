@@ -1,0 +1,93 @@
+@use "variables";
+
+.header {
+  background-color: variables.$color-black;
+  color: variables.$color-white;
+  padding: 2rem 4rem;
+  .logo-box {
+    padding: 1rem;
+    cursor: pointer;
+  }
+  .fa-solid {
+    font-size: 1.8rem;
+  }
+
+  .nav .nav-list {
+    display: flex;
+    gap: 1.5rem;
+    transition: all 0.2s ease;
+  }
+  a:link,
+  a:visited {
+    color: variables.$color-white;
+  }
+  a::after {
+    content: "";
+    display: inline-block;
+    width: 1%;
+    height: 0.2rem;
+    background-color: transparent;
+    transition: all 0.5s ease;
+    overflow: visible;
+  }
+  a:hover::after,
+  a:active::after {
+    width: 100%;
+    background-color: variables.$color-white;
+    line-height: 0.5;
+  }
+}
+.header-container {
+  max-width: 95rem;
+  margin: 0 auto;
+  display: flex;
+  font-size: 1.4rem;
+  justify-content: space-between;
+  align-items: center;
+  .nav {
+    transition: all 0.2s ease;
+  }
+  .nav .nav-list {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+}
+// menu icon
+.fa-solid.fa-bars {
+  font-size: 2rem;
+}
+.menu-btn {
+  display: none;
+}
+.menu-btn:checked ~ .nav {
+  display: block;
+}
+.menu-icon {
+  display: none;
+
+  cursor: pointer;
+}
+@media screen and (max-width: 425px) {
+  .menu-icon {
+    display: block;
+    flex: 1 0 10%;
+  }
+  .logo-box {
+    flex: 1 0 90%;
+  }
+  .header-container {
+    flex-wrap: wrap;
+  }
+  .nav {
+    display: none;
+    width: 100%;
+    transition: all 0.2s ease;
+  }
+  .nav .nav-list {
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 100%;
+    transition: all 0.2s ease;
+  }
+}

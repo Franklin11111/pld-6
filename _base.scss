@@ -1,0 +1,22 @@
+@use "variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Lato", sans-serif;
+  color: variables.$color-gray;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}

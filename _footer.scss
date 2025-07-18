@@ -1,0 +1,26 @@
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 4rem;
+  text-align: center;
+  .logo-box i {
+    font-size: 1.4rem;
+  }
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .social-box {
+      display: flex;
+      gap: 0.5rem;
+      font-size: 1.4rem;
+    }
+  }
+  a {
+    color: #fff;
+  }
+  small {
+    display: inline-block;
+    padding-top: 2rem;
+  }
+}

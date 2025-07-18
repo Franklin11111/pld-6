@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="main.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/b4d287f95b.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Private Jets Rental</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="logo-box">
+          <i class="fa-solid fa-plane-departure"></i>
+        </div>
+
+        <input type="checkbox" id="menu-btn" class="menu-btn" />
+        <label for="menu-btn" class="menu-icon"
+          ><i class="fa-solid fa-bars"></i
+        ></label>
+
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#home">Home</a></li>
+            <li class="nav-item"><a href="#features">Features</a></li>
+            <li class="nav-item"><a href="#testimonials">Testimonials</a></li>
+            <li class="nav-item"><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="section-hero">
+        <div class="hero-text-box">
+          <h1>Make dreams come true with PJR</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+            sed nam tempore distinctio eos ut magnam deleniti soluta incidunt
+            inventore.
+          </p>
+        </div>
+        <a href="#contact" class="btn">Own the Sky Today</a>
+      </section>
+      <section class="features-section" id="features">
+        <h2>Discover Our Luxurios Services</h2>
+        <ul class="features-cards">
+          <li class="card">
+            <img src="images/jet.jpg" alt="Image of the private jet" />
+            <h3>Your Wings To Fly</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+              minima placeat ipsum earum repellat iste.
+            </p>
+            <a href="#" class="card-link">Learn more...</a>
+          </li>
+          <li class="card">
+            <img src="images/board.jpg" alt="Image of the private jet board" />
+            <h3>Unique Comfort</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+              minima placeat ipsum earum repellat iste.
+            </p>
+            <a href="#" class="card-link">Learn more...</a>
+          </li>
+          <li class="card">
+            <img
+              src="images/meal.jpg"
+              alt="Image of meal served in the private jet"
+            />
+            <h3>Exceptional Meal Service</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+              minima placeat ipsum earum repellat iste.
+            </p>
+            <a href="#" class="card-link">Learn more...</a>
+          </li>
+        </ul>
+      </section>
+      <section class="testimonials-section" id="testimonials">
+        <h2>What our customers say?</h2>
+        <article class="testimonials-container">
+          <div class="slide fade">
+            <img src="images/users/user.jpg" alt="Image of the user" />
+            <blockquote>
+              <small>k_smith</small>
+
+              <p>
+                <span>&ldquo;</span>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Incidunt obcaecati id labore nisi sed cumque quae modi eligendi
+                cupiditate voluptatum! Lorem ipsum dolor sit, amet consectetur
+                adipisicing elit. Incidunt obcaecati id labore nisi sed cumque
+                quae modi eligendi cupiditate voluptatum!
+                <span>&rdquo;</span>
+              </p>
+            </blockquote>
+          </div>
+          <div class="slide fade">
+            <img src="images/users/user1.jpg" alt="Image of the user" />
+            <blockquote>
+              <small>whiteshark</small>
+              <p>
+                <span>&ldquo;</span> Lorem ipsum dolor sit, amet consectetur
+                adipisicing elit. Incidunt obcaecati id labore nisi sed cumque
+                quae modi eligendi cupiditate voluptatum! <span>&rdquo;</span>
+              </p>
+            </blockquote>
+          </div>
+          <div class="slide fade">
+            <img src="images/users/user2.jpg" alt="Image of the user" />
+            <blockquote>
+              <small>darkHorse</small>
+              <p>
+                <span>&ldquo;</span> Lorem ipsum dolor sit, amet consectetur
+                adipisicing elit. Incidunt obcaecati id labore nisi sed cumque
+                quae modi eligendi cupiditate voluptatum!Lorem ipsum dolor sit,
+                amet consectetur adipisicing elit. Incidunt obcaecati id labore
+                nisi sed cumque quae modi eligendi cupiditate voluptatum!
+                <span>&rdquo;</span>
+              </p>
+            </blockquote>
+          </div>
+        </article>
+      </section>
+      <section class="contact-section" id="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="post" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Your Fullname"
+              name="name"
+              required
+              pattern="\w{3,16}"
+            />
+            <span class="error-name"></span>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              id="email"
+              required
+            />
+            <span class="error-email"></span>
+          </div>
+          <div class="field">
+            <label for="message">Your message</label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Your message goes here..."
+              required
+              cols="25"
+              rows="10"
+            ></textarea>
+            <span class="error-message"></span>
+          </div>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="logo-box">
+          <i class="fa-solid fa-plane-departure"></i>
+        </div>
+        <ul class="social-box">
+          <li>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+      <small>&copy;PJR-LLT 2025</small>
+    </footer>
+  </body>
+</html>

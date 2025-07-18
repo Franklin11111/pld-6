@@ -1,0 +1,386 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #333;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.header {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem 4rem;
+}
+.header .logo-box {
+  padding: 1rem;
+  cursor: pointer;
+}
+.header .fa-solid {
+  font-size: 1.8rem;
+}
+.header .nav .nav-list {
+  display: flex;
+  gap: 1.5rem;
+  transition: all 0.2s ease;
+}
+.header a:link,
+.header a:visited {
+  color: #fff;
+}
+.header a::after {
+  content: "";
+  display: inline-block;
+  width: 1%;
+  height: 0.2rem;
+  background-color: transparent;
+  transition: all 0.5s ease;
+  overflow: visible;
+}
+.header a:hover::after,
+.header a:active::after {
+  width: 100%;
+  background-color: #fff;
+  line-height: 0.5;
+}
+
+.header-container {
+  max-width: 95rem;
+  margin: 0 auto;
+  display: flex;
+  font-size: 1.4rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-container .nav {
+  transition: all 0.2s ease;
+}
+.header-container .nav .nav-list {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.fa-solid.fa-bars {
+  font-size: 2rem;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.menu-btn:checked ~ .nav {
+  display: block;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 425px) {
+  .menu-icon {
+    display: block;
+    flex: 1 0 10%;
+  }
+  .logo-box {
+    flex: 1 0 90%;
+  }
+  .header-container {
+    flex-wrap: wrap;
+  }
+  .nav {
+    display: none;
+    width: 100%;
+    transition: all 0.2s ease;
+  }
+  .nav .nav-list {
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 100%;
+    transition: all 0.2s ease;
+  }
+}
+.section-hero {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url("images/plane.jpg");
+  height: 90vh;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+.section-hero .hero-text-box {
+  padding-top: 4rem;
+  width: 80%;
+  margin: 0 auto;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.section-hero .hero-text-box h1 {
+  font-size: 3.2rem;
+  letter-spacing: -1px;
+  text-transform: capitalize;
+  line-height: 1.2;
+}
+.section-hero .hero-text-box p {
+  font-size: 1.4rem;
+  margin-top: 2.4rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+  word-spacing: 3px;
+  letter-spacing: 1px;
+}
+.section-hero .btn:link,
+.section-hero .btn:visited {
+  display: inline-block;
+  background-color: #555;
+  padding: 1rem 2rem;
+  color: #fff;
+  border-radius: 0.3rem;
+  font-size: 1.4rem;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+.section-hero .btn:hover,
+.section-hero .btn:active {
+  background-color: #333;
+  box-shadow: 0 0 1rem #fff;
+  transform: scale(1.02);
+}
+
+.features-section {
+  background-color: #168aad;
+  padding: 2rem 4rem;
+}
+.features-section h2 {
+  margin-top: 6rem;
+  text-align: center;
+  color: #fff;
+  font-size: 3.2rem;
+}
+.features-section .features-cards {
+  display: flex;
+  margin: 4rem auto;
+  gap: 1rem;
+  align-items: center;
+  max-width: 95rem;
+  justify-content: center;
+}
+.features-section .features-cards .card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 30%;
+  padding: 2rem 4rem;
+  background-color: #8bc5d6;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0.5rem #fff;
+}
+.features-section .features-cards .card h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+.features-section .features-cards .card p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+.features-section .features-cards .card a:link,
+.features-section .features-cards .card a:visited {
+  font-size: 1.4rem;
+  color: #333;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #b9dce6;
+  border-bottom: 2px solid transparent;
+  width: fit-content;
+  border-radius: 0.2rem;
+  transition: all 0.3s ease;
+}
+.features-section .features-cards .card a:hover,
+.features-section .features-cards .card a:active {
+  border-bottom: 2px solid #333;
+  box-shadow: 0 0 1rem #168aad;
+  transform: scale(1.06);
+}
+@media screen and (max-width: 768px) {
+  .features-section .features-cards .card {
+    max-width: 90%;
+  }
+}
+.features-section .features-cards img {
+  width: 100%;
+  border-radius: 0.2rem;
+  transition: all 0.4s ease;
+}
+.features-section .features-cards img:hover {
+  transform: scale(1.4);
+  box-shadow: 0 0 1rem #fff;
+}
+@media screen and (max-width: 768px) {
+  .features-section .features-cards {
+    flex-direction: column;
+  }
+}
+
+.testimonials-section {
+  background: linear-gradient(to bottom, rgba(22, 138, 173, 0.8), rgba(22, 138, 173, 0.8)), url("images/jet_sky.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 2rem 4rem;
+}
+.testimonials-section h2 {
+  text-align: center;
+  font-size: 3.2rem;
+  line-height: 1.1;
+  margin-top: 4rem;
+  color: #fff;
+}
+.testimonials-section .testimonials-container {
+  margin: 2rem auto;
+  max-width: 95rem;
+}
+.testimonials-section .testimonials-container .slide {
+  display: flex;
+  padding: 2rem 4rem;
+}
+.testimonials-section .testimonials-container .slide img {
+  max-width: 20%;
+  max-height: 15rem;
+  border-radius: 0.7rem;
+  vertical-align: top;
+}
+@media screen and (max-width: 768px) {
+  .testimonials-section .testimonials-container .slide {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+}
+.testimonials-section .testimonials-container .fade {
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+.testimonials-section .testimonials-container blockquote {
+  padding: 2rem 4rem;
+  color: #fff;
+}
+.testimonials-section .testimonials-container blockquote small {
+  font-size: 1.2rem;
+}
+.testimonials-section .testimonials-container blockquote span {
+  font-size: 2.4rem;
+}
+.testimonials-section .testimonials-container blockquote p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+@media screen and (max-width: 768px) {
+  .testimonials-section .testimonials-container blockquote {
+    padding: 1rem 2rem;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.contact-section {
+  background-color: #8bc5d6;
+  padding: 2rem 4rem;
+}
+.contact-section h2 {
+  margin-top: 4rem;
+  text-align: center;
+  color: #0d5368;
+  font-size: 3.2rem;
+}
+.contact-section form {
+  margin: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  justify-content: center;
+}
+.contact-section form label {
+  font-size: 1.4rem;
+  color: #0d5368;
+  font-weight: 800;
+  margin-right: 1.4rem;
+}
+.contact-section form input {
+  padding: 1rem 2rem;
+  border-radius: 0.9rem;
+  border: none;
+}
+.contact-section form textarea {
+  border: none;
+  border-radius: 0.9rem;
+  padding: 1rem 2rem;
+}
+.contact-section form button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #e8f3f7;
+  color: #0d5368;
+  font-weight: 800;
+}
+.contact-section form button:hover {
+  background-color: #0d5368;
+  color: #e8f3f7;
+  box-shadow: 0 0 1rem #0d5368;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 4rem;
+  text-align: center;
+}
+footer .logo-box i {
+  font-size: 1.4rem;
+}
+footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer-container .social-box {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+}
+footer a {
+  color: #fff;
+}
+footer small {
+  display: inline-block;
+  padding-top: 2rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
