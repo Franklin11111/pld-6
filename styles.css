@@ -85,10 +85,6 @@ ul {
   display: none;
 }
 
-.menu-btn:checked ~ .nav {
-  display: block;
-}
-
 .menu-icon {
   display: none;
   cursor: pointer;
@@ -105,7 +101,12 @@ ul {
   .header-container {
     flex-wrap: wrap;
   }
-  .nav {
+  .nav-display {
+    display: block;
+    width: 100%;
+    transition: all 0.2s ease;
+  }
+  nav {
     display: none;
     width: 100%;
     transition: all 0.2s ease;

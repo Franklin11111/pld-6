@@ -2,6 +2,14 @@ const form = document.querySelector("form");
 const email = document.getElementById("email");
 const nameInput = document.getElementById("name");
 const message = document.getElementById("message");
+const navMenu = document.querySelector("nav");
+const menuIcon = document.querySelector(".menu-icon");
+
+// Toggle nav menu
+menuIcon.addEventListener("click", (e) => {
+    navMenu.classList.toggle("nav-display");
+    console.log(navMenu.classList)
+})
 // Slides controller
 let slideIndex = 0;
 showSlides();
