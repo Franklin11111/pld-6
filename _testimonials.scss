@@ -20,6 +20,16 @@
   .testimonials-container {
     margin: 2rem auto;
     max-width: 95rem;
+    color: variables.$color-white;
+    display: flex;
+    align-items: center;
+    .arrow {
+      display: inline-block;
+    }
+    i {
+      font-size: variables.$font-large;
+      cursor: pointer;
+    }
     .slide {
       display: flex;
       padding: 2rem 4rem;

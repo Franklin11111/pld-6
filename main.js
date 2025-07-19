@@ -4,26 +4,57 @@ const nameInput = document.getElementById("name");
 const message = document.getElementById("message");
 const navMenu = document.querySelector("nav");
 const menuIcon = document.querySelector(".menu-icon");
+const arrowLeft = document.querySelector(".left");
+const arrowRight = document.querySelector(".right");
 
 // Toggle nav menu
 menuIcon.addEventListener("click", (e) => {
     navMenu.classList.toggle("nav-display");
 })
-// Slides controller
-let slideIndex = 0;
-showSlides();
+// Slides auto controller
 
-function showSlides() {
+// let slideIndex = 0;
+// showSlides();
+
+// function showSlides() {
+//     let i;
+//     let slides = document.querySelectorAll(".slide");
+//     for (i = 0; i < slides.length; i++) {
+//         slides[i].style.display = "none";
+//     }
+//     slideIndex++;
+//     if (slideIndex > slides.length) { slideIndex = 1 };
+//     slides[slideIndex - 1].style.display = "flex";
+//     setTimeout(showSlides, 5000);
+// }
+
+//Slides manual controller
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+arrowLeft.addEventListener("click", () => {
+    plusSlides(-1)
+})
+arrowRight.addEventListener("click", () => {
+    plusSlides(1)
+})
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
     let i;
     let slides = document.querySelectorAll(".slide");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1 };
     slides[slideIndex - 1].style.display = "flex";
-    setTimeout(showSlides, 5000);
 }
+
 // Form validation
 //check user entries
 email.addEventListener("input", (e) => {

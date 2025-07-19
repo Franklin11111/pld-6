@@ -257,6 +257,16 @@ ul {
 .testimonials-section .testimonials-container {
   margin: 2rem auto;
   max-width: 95rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.testimonials-section .testimonials-container .arrow {
+  display: inline-block;
+}
+.testimonials-section .testimonials-container i {
+  font-size: 3.2rem;
+  cursor: pointer;
 }
 .testimonials-section .testimonials-container .slide {
   display: flex;
