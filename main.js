@@ -72,6 +72,8 @@ form.addEventListener("submit", (event) => {
         alert("Your data is incomplete");
         event.preventDefault();
     } else {
+        localStorage.setItem("name", nameInput.value);
+        alert(`Name ${localStorage.getItem("name")} is saved to localStorage`);
         alert("Thanks! Your data was submitted successfully.")
     }
 })
