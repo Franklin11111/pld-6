@@ -150,7 +150,6 @@
               required
               pattern="\w{3,16}\s{1}\w{3,16}"
             />
-            <span class="error-name"></span>
           </div>
           <div class="field">
             <label for="email">Email</label>
@@ -161,7 +160,6 @@
               id="email"
               required
             />
-            <span class="error-email"></span>
           </div>
           <div class="field">
             <label for="message">Your message</label>
@@ -172,8 +170,8 @@
               required
               cols="25"
               rows="10"
+              minlength="12"
             ></textarea>
-            <span class="error-message"></span>
           </div>
           <button type="submit">Send</button>
         </form>

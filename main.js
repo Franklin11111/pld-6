@@ -57,14 +57,31 @@ function showSlides(n) {
 
 // Form validation
 //check user entries
-email.addEventListener("input", (e) => {
+email.addEventListener("focusout", (e) => {
     checkInput(email, e);
 })
-nameInput.addEventListener("input", (e) => {
+email.addEventListener("focusin", (e) => {
+    if (email.nextSibling.nodeName === "P") {
+        email.nextSibling.style.display = "none";
+    };
+})
+
+nameInput.addEventListener("focusout", (e) => {
     checkInput(nameInput, e);
 })
-message.addEventListener("input", (event) => {
+nameInput.addEventListener("focusin", (e) => {
+    if (nameInput.nextSibling.nodeName === "P") {
+        nameInput.nextSibling.style.display = "none";
+    };
+})
+
+message.addEventListener("focusout", (event) => {
     checkInput(message, event)
+})
+message.addEventListener("focusin", (e) => {
+    if (message.nextSibling.nodeName === "P") {
+        message.nextSibling.style.display = "none";
+    };
 })
 
 form.addEventListener("submit", (event) => {
@@ -81,15 +98,36 @@ form.addEventListener("submit", (event) => {
 function showError(e) {
     const el = e.target;
     if (el.validity.valueMissing) {
-        document.querySelector(`.error-${el.name}`).textContent = `You need to enter your ${el.name}`
+
+        const pEl = document.createElement('p');
+        pEl.innerHTML = `You need to enter your ${el.name}`
+        pEl.style.fontSize = "1.4rem";
+        pEl.style.color = "red";
+        el.parentNode.insertBefore(pEl, el.nextSibling);
     }
     if (el.validity.typeMismatch) {
-        document.querySelector(`.error-${el.name}`).textContent = `Entered value needs to be a ${el.name}.`
-    } if (el.validity.patternMismatch) {
-        document.querySelector(`.error-${el.name}`).textContent = `Entered value does not match required pattern of ${el.name}.`
+
+        const pEl = document.createElement('p');
+        pEl.innerHTML = `Entered value needs to be a ${el.name}.`
+        pEl.style.fontSize = "1.4rem";
+        pEl.style.color = "red";
+        el.parentNode.insertBefore(pEl, el.nextSibling);
+    }
+    if (el.validity.patternMismatch) {
+
+        const pEl = document.createElement('p');
+        pEl.innerHTML = `Entered value does not match required pattern of ${el.name}.`
+        pEl.style.fontSize = "1.4rem";
+        pEl.style.color = "red";
+        el.parentNode.insertBefore(pEl, el.nextSibling);
     }
     if (el.validity.tooShort) {
-        document.querySelector(`.error-${el.name}`).textContent = `${el.name.charAt(0).toUpperCase() + el.name.slice(1)} length should be at least ${el.minLength} characters long`;
+
+        const pEl = document.createElement('p');
+        pEl.innerHTML = `${el.name.charAt(0).toUpperCase() + el.name.slice(1)} length should be at least ${el.minLength} characters long`
+        pEl.style.fontSize = "1.4rem";
+        pEl.style.color = "red";
+        el.parentNode.insertBefore(pEl, el.nextSibling);
     }
 }
 
