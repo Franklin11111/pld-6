@@ -140,3 +140,30 @@ function checkInput(input, event) {
         showError(event);
     }
 }
+// Intersection Observer API
+const target = document.querySelector(".header");
+
+const options = {
+    root: null,
+    rootMargin: "20px",
+    scrollMargin: "0px",
+    threshold: 0,
+};
+
+const intersectionCallback = (entries, observer) => {
+    const header = document.querySelector(".header");
+    entries.forEach((entry) => {
+        console.log(entry.isIntersecting);
+        if (entry.isIntersecting) {
+            let elem = entry.target;
+            elem.style.position = "fixed";
+            elem.style.width = '100%';
+        } //else {
+        //     // header.style.display = "block";
+        //     header.style.position = "relative";
+        // }
+    })
+}
+
+const observer = new IntersectionObserver(intersectionCallback, options);
+observer.observe(target);
