@@ -373,7 +373,6 @@ footer {
   background-color: #000;
   color: #fff;
   padding: 4rem;
-  text-align: center;
 }
 footer .logo-box i {
   font-size: 1.4rem;
@@ -392,7 +391,8 @@ footer a {
   color: #fff;
 }
 footer small {
-  display: inline-block;
+  display: block;
+  text-align: center;
   padding-top: 2rem;
 }
 

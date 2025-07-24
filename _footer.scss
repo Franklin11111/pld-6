@@ -2,7 +2,7 @@ footer {
   background-color: #000;
   color: #fff;
   padding: 4rem;
-  text-align: center;
+  // text-align: center;
   .logo-box i {
     font-size: 1.4rem;
   }
@@ -20,7 +20,8 @@ footer {
     color: #fff;
   }
   small {
-    display: inline-block;
+    display: block;
+    text-align: center;
     padding-top: 2rem;
   }
 }
