@@ -151,17 +151,13 @@ const options = {
 };
 
 const intersectionCallback = (entries, observer) => {
-    const header = document.querySelector(".header");
     entries.forEach((entry) => {
         console.log(entry.isIntersecting);
         if (entry.isIntersecting) {
             let elem = entry.target;
             elem.style.position = "fixed";
             elem.style.width = '100%';
-        } //else {
-        //     // header.style.display = "block";
-        //     header.style.position = "relative";
-        // }
+        }
     })
 }
 
