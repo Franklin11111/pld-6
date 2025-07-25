@@ -152,7 +152,6 @@ const options = {
 
 const intersectionCallback = (entries, observer) => {
     entries.forEach((entry) => {
-        console.log(entry.isIntersecting);
         if (entry.isIntersecting) {
             let elem = entry.target;
             elem.style.position = "fixed";
@@ -163,3 +162,18 @@ const intersectionCallback = (entries, observer) => {
 
 const observer = new IntersectionObserver(intersectionCallback, options);
 observer.observe(target);
+
+// Images Lazy Loading
+const imgs = document.querySelectorAll('img')
+
+const imagesObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.src = entry.target.getAttribute('data-src');
+        imagesObserver.unobserve(entry.target);
+    })
+});
+
+imgs.forEach(image => {
+    imagesObserver.observe(image);
+})
